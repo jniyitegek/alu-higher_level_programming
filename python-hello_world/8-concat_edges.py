@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 str = "Python is an interpreted, interactive, object-oriented programming\
  language that combines remarkable power with very clear syntax"
-print(str[39:66]+" "+str[106:110]+" "+str[0:6])
-exit(1)
+str = str[str.find("object-oriented programming"):str.find(" language")]
+print(str)
