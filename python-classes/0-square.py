@@ -17,7 +17,7 @@ Usage:
 class Square:
     """
     A class that defines a square.
-    
+
     This is an empty class that serves as a foundation for implementing
     square-related functionality in future iterations.
     """
