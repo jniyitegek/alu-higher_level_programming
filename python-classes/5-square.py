@@ -19,10 +19,10 @@ class Square:
     Attributes:
         __size (int): Private instance attribute for the square's side length.
     """
- 
+
     def __init__(self, size=0):
         """Initialize a new Square with the given size.
-        
+
         Args:
             size (int, optional): The length of each side of the square.
                                   Defaults to 0.
