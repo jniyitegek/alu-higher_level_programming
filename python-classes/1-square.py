@@ -13,7 +13,8 @@ class Square:
     The size is set during initialization and cannot be accessed directly.
 
     Attributes:
-        __size: Private instance attribute representing the square's side length.
+        __size: Private instance attribute representing the square's
+                side length.
     """
 
     def __init__(self, size):
