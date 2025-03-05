@@ -17,8 +17,8 @@ class Square:
 
     Attributes:
         __size (int): Private instance attribute for the square's side length.
-        __position (tuple): Private instance attribute for the square's position
-                           as a tuple of 2 positive integers.
+        __position (tuple): Private instance attribute for the square's
+                           position as a tuple of 2 positive integers.
     """
 
     def __init__(self, size=0, position=(0, 0)):
@@ -27,8 +27,9 @@ class Square:
         Args:
             size (int, optional): The length of each side of the square.
                                   Defaults to 0.
-            position (tuple, optional): The position of the square as a tuple
-                                       of 2 positive integers. Defaults to (0, 0).
+            position (tuple, optional): The position of the square as a
+                                       tuple of 2 positive integers.
+                                       Defaults to (0, 0).
         """
         self.size = size
         self.position = position
