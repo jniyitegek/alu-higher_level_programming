@@ -69,3 +69,9 @@ class Rectangle(BaseGeometry):
             str: Rectangle details in the format [Rectangle] <width>/<height>.
         """
         return f"[Rectangle] {self.__width}/{self.__height}"
+
+
+# Testing instantiation to ensure it works as expected
+rect = Rectangle(3, 5)
+print(rect)  # Expected output: [Rectangle] 3/5
+print(rect.area())  # Expected output: 15
