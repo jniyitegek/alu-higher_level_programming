@@ -27,14 +27,7 @@ Rectangle Methods:
     - __str__(self): Returns a string representation of the rectangle.
 """
 
-class BaseGeometry:
-    """BaseGeometry class with validation methods."""
-    def integer_validator(self, name, value):
-        """Validates that a value is a positive integer."""
-        if type(value) is not int:
-            raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 class Rectangle(BaseGeometry):
     """Rectangle class that inherits from BaseGeometry."""
