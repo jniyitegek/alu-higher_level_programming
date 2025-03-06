@@ -76,7 +76,7 @@ class Rectangle:
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        """Prints a message when an instance is deleted and decrements count."""
+        """Prints a message when an instance is deleted."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
@@ -91,5 +91,5 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Returns a new Rectangle instance where width and height are equal."""
+        """Returns a new Rectangle instance are equal."""
         return cls(size, size)
