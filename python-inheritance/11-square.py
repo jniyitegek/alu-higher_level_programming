@@ -55,6 +55,14 @@ class Rectangle:
         """Returns a string representation of the rectangle."""
         return f"[Rectangle] {self.width}/{self.height}"
 
+    @staticmethod
+    def integer_validator(name, value):
+        """Validates that a value is a positive integer."""
+        if not isinstance(value, int):
+            raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
+
 
 class Square(Rectangle):
     """
@@ -66,14 +74,6 @@ class Square(Rectangle):
         """
         self.integer_validator("size", size)
         super().__init__(size, size)
-
-    @staticmethod
-    def integer_validator(name, value):
-        """Validates that a value is a positive integer."""
-        if not isinstance(value, int):
-            raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
 
     def area(self):
         """Returns the area of the square."""
