@@ -5,6 +5,12 @@ This module defines a Rectangle class that inherits from the BaseGeometry class.
 It represents a rectangle with a given width and height, which are validated to
 ensure they are positive integers. The width and height are private attributes
 and do not have getters or setters.
+
+Example:
+    To use the Rectangle class, instantiate it with a width and height:
+
+        r = Rectangle(5, 10)
+        print(r.__dict__)  # Output: {'_Rectangle__width': 5, '_Rectangle__height': 10}
 """
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
