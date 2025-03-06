@@ -63,13 +63,15 @@ class Rectangle:
         return 2 * (self.width + self.height)
 
     def __str__(self):
-        """Returns a string representation of the rectangle using print_symbol."""
+        """Returns a string representation using print_symbol."""
         if self.width == 0 or self.height == 0:
             return ""
-        return "\n".join(str(self.print_symbol) * self.width for _ in range(self.height))
+        return "\n".join(
+            str(self.print_symbol) * self.width for _ in range(self.height)
+        )
 
     def __repr__(self):
-        """Returns a string representation that can recreate an instance."""
+        """Returns a string representation to recreate an instance."""
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
@@ -90,4 +92,3 @@ class Rectangle:
     def square(cls, size=0):
         """Returns a new Rectangle instance where width and height are equal."""
         return cls(size, size)
-
