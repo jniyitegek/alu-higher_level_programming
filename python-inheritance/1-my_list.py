@@ -1,37 +1,38 @@
 #!/usr/bin/python3
-"""
-Module: 1-my_list.py
+"""Module for MyList class that inherits from list.
 
-This module defines the MyList class, which extends the built-in list class
-and includes a method to print the list in ascending sorted order.
-
-Usage Example:
-    my_list = MyList()
-    my_list.append(1)
-    my_list.append(4)
-    my_list.append(2)
-    my_list.append(3)
-    my_list.append(5)
-    print(my_list)          # Prints the original list
-    my_list.print_sorted()  # Prints the sorted list
-    print(my_list)          # Prints the original list unchanged
+This module defines a custom list class, `MyList`, which inherits from the built-in
+`list` class. It provides an additional method, `print_sorted()`, to print the list
+in ascending sorted order. This module assumes that all elements in the list are of
+type `int`.
 """
 
 class MyList(list):
-    """A subclass of list with an additional method to print a sorted version of the list."""
-    
-    def print_sorted(self):
-        """Prints the list in ascending sorted order."""
-        print(sorted(self))
+    """A custom list class that inherits from the built-in `list` class.
 
-# Example usage
-if __name__ == "__main__":
-    my_list = MyList()
-    my_list.append(1)
-    my_list.append(4)
-    my_list.append(2)
-    my_list.append(3)
-    my_list.append(5)
-    print(my_list)
-    my_list.print_sorted()
-    print(my_list)
+    This class extends the functionality of the `list` class by adding a method
+    to print the list in sorted order. It assumes that all elements in the list
+    are of type `int`.
+
+    Attributes:
+        Inherits all attributes from the `list` class.
+    """
+
+    def print_sorted(self):
+        """Print the list in ascending sorted order.
+
+        This method sorts the list in ascending order and prints it. It does not
+        modify the original list.
+
+        Assumptions:
+            All elements in the list are of type `int`.
+
+        Example:
+            >>> my_list = MyList()
+            >>> my_list.append(3)
+            >>> my_list.append(1)
+            >>> my_list.append(2)
+            >>> my_list.print_sorted()
+            [1, 2, 3]
+        """
+        print(sorted(self))
