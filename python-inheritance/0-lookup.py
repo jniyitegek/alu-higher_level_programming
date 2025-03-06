@@ -2,8 +2,9 @@
 """Module for inspecting objects and retrieving their attributes and methods.
 
 This module provides a function `lookup` that returns a list of available
-attributes and methods of a given object using Python's built-in `dir()` function.
+attributes and methods built-in `dir()` function.
 """
+
 
 def lookup(obj):
     """Returns a list of available attributes and methods of an object.
@@ -15,7 +16,7 @@ def lookup(obj):
         obj (object): The object to inspect.
 
     Returns:
-        list: A list of strings representing the names of the attributes and methods
+        list: A list of strings  the attributes and methods
               of the object.
     """
     return dir(obj)
