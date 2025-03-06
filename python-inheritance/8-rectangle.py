@@ -2,18 +2,40 @@
 """
 Rectangle Module
 
-This module defines a Rectangle class that inherits from the BaseGeometry class
-defined in the `7-base_geometry` module. The Rectangle class represents a rectangle
-shape and includes methods for initializing and validating its dimensions.
+This module defines a Rectangle class that inherits from the BaseGeometry class.
+The Rectangle class represents a rectangle shape and includes methods for
+initializing and validating its dimensions.
 
 Classes:
+    BaseGeometry: A base class for geometry-related operations.
     Rectangle: A class that represents a rectangle and inherits from BaseGeometry.
-
-Dependencies:
-    The BaseGeometry class is imported from the `7-base_geometry` module.
 """
 
-from 7-base_geometry import BaseGeometry
+
+class BaseGeometry:
+    """
+    BaseGeometry Class
+
+    A base class for geometry-related operations. This class includes methods
+    for validating integer values.
+    """
+
+    def integer_validator(self, name, value):
+        """
+        Validate that a value is a positive integer.
+
+        Args:
+            name (str): The name of the value being validated.
+            value (int): The value to validate.
+
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is less than or equal to 0.
+        """
+        if not isinstance(value, int):
+            raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
 
 
 class Rectangle(BaseGeometry):
