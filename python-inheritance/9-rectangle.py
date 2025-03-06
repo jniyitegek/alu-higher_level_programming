@@ -10,10 +10,11 @@ BaseGeometry includes:
     - integer_validator(name, value): Ensures value is a positive integer.
 
 Rectangle includes:
-    - __init__(self, width, height): Initializes a rectangle with validated width and height.
+    - __init__(self, width, height): Initializes a width and height.
     - area(self): Returns the area of the rectangle.
-    - __str__(self): Returns a string representation of the rectangle in the format [Rectangle] width/height.
+    - __str__(self): Returns a string the format [Rectangle] width/height.
 """
+
 
 class BaseGeometry:
     """BaseGeometry class with validation methods."""
@@ -23,6 +24,7 @@ class BaseGeometry:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
+
 
 class Rectangle(BaseGeometry):
     """Rectangle class that inherits from BaseGeometry."""
@@ -38,5 +40,5 @@ class Rectangle(BaseGeometry):
         return self.__width * self.__height
 
     def __str__(self):
-        """Returns the rectangle description in the format [Rectangle] width/height."""
+        """Returns the rectangle format [Rectangle] width/height."""
         return f"[Rectangle] {self.__width}/{self.__height}"
