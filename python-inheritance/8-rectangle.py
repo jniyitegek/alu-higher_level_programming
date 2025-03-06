@@ -4,9 +4,10 @@ Module: rectangle
 Defines a Rectangle class that inherits from BaseGeometry.
 """
 
+
 class BaseGeometry:
     """
-    Base class for geometry objects.
+    Base class for geometry objects with validation functionality.
     """
 
     def integer_validator(self, name, value):
