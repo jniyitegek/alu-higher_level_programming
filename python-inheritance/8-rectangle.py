@@ -1,43 +1,54 @@
 #!/usr/bin/python3
-"""Module for Rectangle class that inherits from BaseGeometry.
+"""
+Module for BaseGeometry and Rectangle classes.
 
-This module defines a Rectangle class that inherits from the BaseGeometry class.
-It represents a rectangle with a given width and height, which are validated to
-ensure they are positive integers. The width and height are private attributes
-and do not have getters or setters.
+This module defines a BaseGeometry class that provides integer validation
+and a Rectangle class that inherits from BaseGeometry. The Rectangle class
+represents a rectangle with a specified width and height, ensuring they
+are positive integers.
 
 Example:
-    To use the Rectangle class, instantiate it with a width and height:
+    To create a Rectangle instance:
 
-        r = Rectangle(5, 10)
-        print(r.__dict__)  # Output: {'_Rectangle__width': 5, '_Rectangle__height': 10}
+        r = Rectangle(4, 6)
+        print(r)  # Output: [Rectangle] 4/6
+        print(r.area())  # Output: 24
+
+Classes:
+    - BaseGeometry: Provides a method to validate integer values.
+    - Rectangle: Inherits from BaseGeometry and represents a rectangle.
+
+BaseGeometry Methods:
+    - integer_validator(name, value): Ensures the value is a positive integer.
+
+Rectangle Methods:
+    - __init__(self, width, height): Initializes a rectangle with validated width and height.
+    - area(self): Returns the area of the rectangle.
+    - __str__(self): Returns a string representation of the rectangle.
 """
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+class BaseGeometry:
+    """BaseGeometry class with validation methods."""
+    def integer_validator(self, name, value):
+        """Validates that a value is a positive integer."""
+        if type(value) is not int:
+            raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
 
 class Rectangle(BaseGeometry):
-    """A class representing a rectangle, inheriting from BaseGeometry.
-
-    This class represents a rectangle with a given width and height. The width
-    and height are validated to ensure they are positive integers and are stored
-    as private attributes.
-
-    Attributes:
-        __width (int): The width of the rectangle.
-        __height (int): The height of the rectangle.
-    """
-
+    """Rectangle class that inherits from BaseGeometry."""
     def __init__(self, width, height):
-        """Initialize a Rectangle instance.
-
-        Args:
-            width (int): The width of the rectangle.
-            height (int): The height of the rectangle.
-
-        Raises:
-            Exception: If width or height is not a positive integer.
-        """
+        """Initialize a Rectangle instance with validated width and height."""
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
         self.__height = height
+
+    def area(self):
+        """Calculates and returns the area of the rectangle."""
+        return self.__width * self.__height
+
+    def __str__(self):
+        """Returns a formatted string representation of the rectangle."""
+        return f"[Rectangle] {self.__width}/{self.__height}"
