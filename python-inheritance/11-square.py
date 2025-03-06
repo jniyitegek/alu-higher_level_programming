@@ -68,12 +68,13 @@ class Square(Rectangle):
         super().__init__(size, size)
         self.__size = size
 
-    def integer_validator(self, name, value):
+    @staticmethod
+    def integer_validator(name, value):
         """Validates that a value is a positive integer."""
         if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
-            raise ValueError(f"{name} must be > 0")
+            raise ValueError(f"{name} must be greater than 0")
 
     def area(self):
         """Returns the area of the square."""
