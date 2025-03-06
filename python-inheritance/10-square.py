@@ -1,129 +1,102 @@
 #!/usr/bin/python3
 """
-Rectangle and Square Inheritance Module
-
-This module defines three classes:
-
-- BaseGeometry: A base class that provides a method to validate integer values.
-- Rectangle: A subclass of BaseGeometry that represents a rectangle with a specified width and height.
-- Square: A subclass of Rectangle that represents a square with a specified size.
-
-The Rectangle and Square classes ensure that their dimensions are positive integers using the integer_validator method
-from BaseGeometry. Both classes implement methods to compute the area and return a string representation
-of their dimensions.
-
-Example Usage:
-    >>> r = Rectangle(4, 6)
-    >>> print(r)
-    [Rectangle] 4/6
-    >>> print(r.area())
-    24
-    
-    >>> s = Square(5)
-    >>> print(s)
-    [Square] 5/5
-    >>> print(s.area())
-    25
-
-Classes:
-    BaseGeometry:
-        - Provides a method to validate integer values.
-    Rectangle:
-        - Inherits from BaseGeometry and represents a rectangle.
-    Square:
-        - Inherits from Rectangle and represents a square.
-
-BaseGeometry Methods:
-    integer_validator(name, value):
-        - Ensures the value is a positive integer.
-
-Rectangle Methods:
-    __init__(self, width, height):
-        - Initializes a rectangle with validated width and height.
-    area(self):
-        - Returns the area of the rectangle.
-    __str__(self):
-        - Returns a string representation of the rectangle.
-
-Square Methods:
-    __init__(self, size):
-        - Initializes a square with validated size.
-    area(self):
-        - Returns the area of the square.
-    __str__(self):
-        - Returns a string representation of the square.
+This module defines the Square class which inherits from the Rectangle class.
+The Square class includes validation for its size attribute and provides methods 
+to compute the area and represent the square as a string.
 """
 
-class BaseGeometry:
-    """Base class for geometry objects, providing validation methods."""
+class Rectangle:
+    """
+    A class representing a rectangle.
+    Assume this is the Rectangle class from 9-rectangle.py.
+    """
 
-    def integer_validator(self, name, value):
-        """
-        Validate that a given value is a positive integer.
-        
-        Args:
-            name (str): The name of the variable.
-            value (int): The value to validate.
-        
-        Raises:
-            TypeError: If value is not an integer.
-            ValueError: If value is not greater than zero.
-        """
-        if not isinstance(value, int):
-            raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
-
-class Rectangle(BaseGeometry):
-    """A class representing a rectangle, inheriting from BaseGeometry."""
-    
     def __init__(self, width, height):
         """
-        Initialize a Rectangle instance.
-        
+        Initializes a rectangle with width and height.
+
         Args:
             width (int): The width of the rectangle.
             height (int): The height of the rectangle.
-        
+
         Raises:
             TypeError: If width or height is not an integer.
-            ValueError: If width or height is not greater than zero.
+            ValueError: If width or height is not greater than 0.
         """
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
         self.__height = height
 
+    def integer_validator(self, name, value):
+        """
+        Validates that the value is a positive integer.
+
+        Args:
+            name (str): The name of the attribute.
+            value (int): The value of the attribute.
+
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is not greater than 0.
+        """
+        if type(value) is not int:
+            raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
+
     def area(self):
-        """Calculate and return the area of the rectangle."""
+        """
+        Returns the area of the rectangle.
+
+        Returns:
+            int: The area of the rectangle.
+        """
         return self.__width * self.__height
 
     def __str__(self):
-        """Return a string representation of the rectangle."""
+        """
+        Returns a string representation of the rectangle.
+
+        Returns:
+            str: The string representation of the rectangle.
+        """
         return f"[Rectangle] {self.__width}/{self.__height}"
 
 class Square(Rectangle):
-    """A class representing a square, inheriting from Rectangle."""
-    
+    """
+    A class representing a square that inherits from Rectangle.
+    """
+
     def __init__(self, size):
         """
-        Initialize a Square instance.
-        
+        Initializes a square with a given size.
+
         Args:
             size (int): The size of the square.
-        
+
         Raises:
             TypeError: If size is not an integer.
-            ValueError: If size is not greater than zero.
+            ValueError: If size is not greater than 0.
         """
         self.integer_validator("size", size)
-        super().__init__(size, size)
         self.__size = size
+        super().__init__(size, size)
 
     def area(self):
-        """Calculate and return the area of the square."""
-        return self.__size * self.__size
+        """
+        Returns the area of the square.
+
+        Returns:
+            int: The area of the square.
+        """
+        return self.__size ** 2
 
     def __str__(self):
-        """Return a string representation of the square."""
+        """
+        Returns a string representation of the square.
+
+        Returns:
+            str: The string representation of the square.
+        """
         return f"[Square] {self.__size}/{self.__size}"
