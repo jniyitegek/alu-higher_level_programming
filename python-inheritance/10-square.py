@@ -54,7 +54,25 @@ Square Methods:
         - Returns a string representation of the square.
 """
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+class BaseGeometry:
+    """Base class for geometry objects, providing validation methods."""
+
+    def integer_validator(self, name, value):
+        """
+        Validate that a given value is a positive integer.
+        
+        Args:
+            name (str): The name of the variable.
+            value (int): The value to validate.
+        
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is not greater than zero.
+        """
+        if not isinstance(value, int):
+            raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
 
 class Rectangle(BaseGeometry):
     """A class representing a rectangle, inheriting from BaseGeometry."""
