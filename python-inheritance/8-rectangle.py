@@ -1,27 +1,6 @@
 #!/usr/bin/python3
-"""
-Module: rectangle
-==================
-This module defines the Rectangle class, which is a subclass of BaseGeometry. 
-The Rectangle class provides functionality for creating and validating rectangles 
-based on width and height dimensions.
+"""Module for BaseGeometry class."""
 
-Classes:
---------
-    Rectangle
-        Inherits from BaseGeometry and adds specific functionality for 
-        handling rectangle dimensions, including initialization and validation.
-
-Usage:
-------
-To use the Rectangle class, ensure that the '7-base_geometry' module is available 
-and contains the necessary BaseGeometry implementation. Import and initialize 
-Rectangle with valid integer dimensions:
-
-    Example:
-        >>> from rectangle import Rectangle
-        >>> rect = Rectangle(5, 10)
-"""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
