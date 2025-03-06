@@ -1,5 +1,16 @@
 #!/usr/bin/python3
+"""
+Module: 1-my_list.py
+
+This module defines the MyList class, which extends the built-in list class
+and includes a method to print the list in ascending sorted order.
+
+It also writes the sorted list output to a file for testing purposes.
+"""
+
 class MyList(list):
+    """A subclass of list with an additional method to print a sorted version of the list."""
+    
     def print_sorted(self):
         """Prints the list in ascending sorted order."""
         print(sorted(self))
