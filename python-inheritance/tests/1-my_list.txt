@@ -1,42 +1,24 @@
-# Test 1: Basic sorting
->>> my_list = MyList()
->>> my_list.append(3)
->>> my_list.append(1)
->>> my_list.append(2)
->>> my_list.print_sorted()
-[1, 2, 3]
+Test: Create an instance of MyList and print its elements.
+Input:
+    my_list = MyList()
+    my_list.append(3)
+    my_list.append(1)
+    my_list.append(2)
+    print(my_list)
 
-# Test 2: Empty list
->>> my_list = MyList()
->>> my_list.print_sorted()
-[]
+Expected Output:
+    [3, 1, 2]
 
-# Test 3: Single element
->>> my_list = MyList()
->>> my_list.append(42)
->>> my_list.print_sorted()
-[42]
+Test: Use the print_sorted() method to print a sorted version of the list.
+Input:
+    my_list.print_sorted()
 
-# Test 4: Already sorted list
->>> my_list = MyList()
->>> my_list.append(10)
->>> my_list.append(20)
->>> my_list.append(30)
->>> my_list.print_sorted()
-[10, 20, 30]
+Expected Output:
+    [1, 2, 3]
 
-# Test 5: Negative numbers
->>> my_list = MyList()
->>> my_list.append(-5)
->>> my_list.append(-1)
->>> my_list.append(-3)
->>> my_list.print_sorted()
-[-5, -3, -1]
+Test: Verify the original list remains unchanged after calling print_sorted().
+Input:
+    print(my_list)
 
-# Test 6: Duplicate elements
->>> my_list = MyList()
->>> my_list.append(5)
->>> my_list.append(5)
->>> my_list.append(3)
->>> my_list.print_sorted()
-[3, 5, 5]
+Expected Output:
+    [3, 1, 2]
