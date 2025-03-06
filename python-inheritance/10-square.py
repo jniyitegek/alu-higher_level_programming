@@ -1,22 +1,14 @@
 #!/usr/bin/python3
 """
-This module contains the definition of the `Square` class, which is a specialized
-version of the `Rectangle` class. It validates the size attribute, computes
-the area, and provides a string representation of the square.
+This module defines the `Square` and `Rectangle` classes.
+The `Square` class inherits from the `Rectangle` class and provides validation,
+area computation, and string representation.
 
 Classes:
-    Rectangle: A class that defines a rectangle. Assumes width and height must
-               be validated as positive integers.
-    Square: A class that defines a square, inheriting from the Rectangle class.
-
-Usage:
-    Create a Square instance by providing a positive integer as size:
-        square = Square(5)
-    Compute the area of the square:
-        print(square.area())
-    Get the string representation of the square:
-        print(square)
+    Rectangle: A class that defines a rectangle with width and height attributes.
+    Square: A specialized rectangle with equal width and height (size).
 """
+
 class Rectangle:
     """
     A class representing a rectangle. Provides integer validation for its
@@ -117,3 +109,10 @@ class Square(Rectangle):
             str: A formatted string displaying the square's dimensions.
         """
         return f"[Square] {self.__size}/{self.__size}"
+
+# Explicit test for inheritance
+if __name__ == "__main__":
+    print(issubclass(Square, Rectangle))  # Expected output: True
+    square = Square(5)
+    print(square)  # Expected output: [Square] 5/5
+    print(square.area())  # Expected output: 25
