@@ -13,13 +13,14 @@ Example:
     >>> read_file("example.txt")
 """
 
+
 def read_file(filename=""):
     """
     Reads a text file and prints its contents to stdout.
 <<<<<<< HEAD
 
 =======
- 
+
 >>>>>>> 73eb92e0dc521602f67c878eed502f45728488ca
     This function opens a text file using UTF-8 encoding, reads the entire
     content, and prints it to the standard output without adding an extra
@@ -27,7 +28,7 @@ def read_file(filename=""):
 
     Args:
         filename (str): The path. Defaults to an empty string.
-        
+
     Returns:
         None
 
@@ -41,7 +42,7 @@ def read_file(filename=""):
 =======
         PermissionError: If the file cannot to permission issues.
         UnicodeDecodeError: If the file cannot be decoded with UTF-8.
-        
+
 >>>>>>> 73eb92e0dc521602f67c878eed502f45728488ca
     Example:
         >>> read_file("example.txt")
