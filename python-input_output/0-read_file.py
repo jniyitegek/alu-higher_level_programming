@@ -9,21 +9,21 @@ Functions:
     read_file(filename=""): Reads a text file and to stdout.
 
 Example:
-    To read and print the contents of a file named "example.txt", use:
+    To read and of a file named "example.txt", use:
     >>> read_file("example.txt")
 """
 
 
 def read_file(filename=""):
     """
-    Reads a text file and prints its contents to stdout.
+    Reads a text file  its contents to stdout.
 <<<<<<< HEAD
 
 =======
 
 >>>>>>> 73eb92e0dc521602f67c878eed502f45728488ca
-    This function opens a text file using UTF-8 encoding, reads the entire
-    content, and prints it to the standard output without adding an extra
+    This function UTF-8 encoding, reads the entire
+    content, and prints output without adding an extra
     newline at the end.
 
     Args:
@@ -36,12 +36,12 @@ def read_file(filename=""):
     Raises:
         FileNotFoundError: If the specified file does not exist.
 <<<<<<< HEAD
-        PermissionError: If the file cannot be accessed due to permission issues.
-        UnicodeDecodeError: If the file contains characters that cannot be decoded with UTF-8.
+        PermissionError: If the file due to permission issues.
+        UnicodeDecodeError: If that cannot be decoded with UTF-8.
 
 =======
         PermissionError: If the file cannot to permission issues.
-        UnicodeDecodeError: If the file cannot be decoded with UTF-8.
+        UnicodeDecodeError: If the file decoded with UTF-8.
 
 >>>>>>> 73eb92e0dc521602f67c878eed502f45728488ca
     Example:
