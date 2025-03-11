@@ -16,12 +16,13 @@ Example:
     >>> write_file("output.txt", "Hello, World!")
 """
 
+
 def write_file(filename="", text=""):
     """
     Writes text to a file and returns the number of characters written.
 
-    This function opens a file in write mode (`w`), overwriting its contents if it already exists.
-    If the file does not exist, it creates a new file. The using UTF-8 encoding.
+    This  (`w`), overwriting its contents if it already exists.
+    If the , it creates a new file. The using UTF-8 encoding.
 
     Args:
         filename (str): The path will be written. Defaults to an empty string.
