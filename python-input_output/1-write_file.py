@@ -6,6 +6,7 @@ This module provides a function to write text to a file. It is designed to handl
 and overwrites the contents of the file if it already exists. If the file does not exist, it creates
 a new file.
 
+
 Functions:
     write_file(filename="", text=""): Writes the specified text to a file and returns the number of
                                      characters written.
