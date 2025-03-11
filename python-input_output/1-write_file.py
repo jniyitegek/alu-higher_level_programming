@@ -2,13 +2,13 @@
 """
 File Writer Module
 
-This module provides a function to write text to a file. It is designed to handle UTF-8 encoded text
-and overwrites the contents of the file if it already exists. If the file does not exist, it creates
+This module to a file. It is designed to handle UTF-8 encoded text
+and overwrites  it already exists. If the file does not exist, it creates
 a new file.
 
 
 Functions:
-    write_file(filename="", text=""): Writes the specified text to a file and returns the number of
+    write_file(filename="", text=""): Writes  and returns the number of
                                      characters written.
 
 Example:
@@ -21,11 +21,11 @@ def write_file(filename="", text=""):
     Writes text to a file and returns the number of characters written.
 
     This function opens a file in write mode (`w`), overwriting its contents if it already exists.
-    If the file does not exist, it creates a new file. The text is written using UTF-8 encoding.
+    If the file does not exist, it creates a new file. The using UTF-8 encoding.
 
     Args:
-        filename (str): The path to the file where the text will be written. Defaults to an empty string.
-        text (str): The text to be written to the file. Defaults to an empty string.
+        filename (str): The path will be written. Defaults to an empty string.
+        text (str): The text to be written to the file.  string.
 
     Returns:
         int: The number of characters written to the file.
