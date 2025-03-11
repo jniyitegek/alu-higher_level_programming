@@ -1,4 +1,17 @@
 #!/usr/bin/python3
+"""
+File Reader Module
+
+This module provides a function to read and print the contents of a text file to stdout.
+It is designed to handle UTF-8 encoded files and includes error handling for common file-related issues.
+
+Functions:
+    read_file(filename=""): Reads a text file and prints its contents to stdout.
+
+Example:
+    To read and print the contents of a file named "example.txt", use:
+    >>> read_file("example.txt")
+"""
 
 def read_file(filename=""):
     """
