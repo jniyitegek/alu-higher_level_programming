@@ -1,11 +1,4 @@
 #!/usr/bin/python3
-    """
-    Reads a text file and prints its contents to stdout.
-    
-    This function opens a text file using UTF-8 encoding, reads the entire
-    content, and prints it to the standard output without adding an extra
-    newline at the end.
-    """
 
 def read_file(filename=""):
     """
