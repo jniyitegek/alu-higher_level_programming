@@ -13,6 +13,7 @@ Example:
     >>> to_json_string({"name": "John", "age": 30})
 """
 
+
 def to_json_string(my_obj):
     """
     Converts a Python object into a JSON-formatted string.
