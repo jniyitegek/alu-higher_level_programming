@@ -1,4 +1,4 @@
-# models/base.py
+#!/usr/bin/python3
 
 class Base:
     """Base class for managing the id attribute in future classes"""
