@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Prints out all values in the states tables of a database
-where name matches the argument in a safe way
+Program prints out all cities from a database
 """
 
 
@@ -13,7 +12,8 @@ if __name__ == '__main__':
                          db=sys.argv[3], port=3306)
 
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = %s;", (sys.argv[4],))
+    cursor.execute("SELECT cities.id, cities.name, states.name \
+    FROM cities JOIN states ON cities.state_id = states.id;")
     states = cursor.fetchall()
 
     for state in states:
