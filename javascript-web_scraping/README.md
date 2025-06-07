@@ -1,0 +1,1 @@
+This is the read me file for everything in this directory of webscraping
